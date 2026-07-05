@@ -14,10 +14,10 @@ export const metadata = {
 const RootLayout = ({ children }) => (
   <html lang="en" className={inter.variable}>
     <body className="bg-[#050816] text-[#f1f5f9] font-[var(--font-inter)] antialiased overflow-x-hidden">
-      <SmoothScrollProvider>
+      {/* <SmoothScrollProvider> */}
         <CustomCursor /> 
         {children}
-      </SmoothScrollProvider>
+      {/* </SmoothScrollProvider> */}
     </body>
   </html>
 );
