@@ -139,7 +139,8 @@ const WowSection = () => {
       <div
         className="absolute inset-0"
         style={{
-          background: "radial-gradient(ellipse 60% 70% at 60% 50%, rgba(99,102,241,0.08) 0%, rgba(139,92,246,0.04) 40%, transparent 70%)",
+          background:
+            "radial-gradient(ellipse 60% 70% at 60% 50%, rgba(99,102,241,0.08) 0%, rgba(139,92,246,0.04) 40%, transparent 70%)",
         }}
       />
 
@@ -157,14 +158,12 @@ const WowSection = () => {
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
                 Intelligence that{" "}
-                <span className="gradient-text-blue">
-                  thinks ahead.
-                </span>
+                <span className="gradient-text-blue">thinks ahead.</span>
               </h2>
               <p className="text-[#94a3b8] text-lg leading-relaxed mb-10">
-                Xai`s core engine doesn`t just process what exists — it anticipates
-                what comes next. Built on adaptive neural architectures that evolve
-                with your data.
+                Xai`s core engine doesn`t just process what exists — it
+                anticipates what comes next. Built on adaptive neural
+                architectures that evolve with your data.
               </p>
 
               {/* Features */}
@@ -181,8 +180,12 @@ const WowSection = () => {
                       <Icon className="w-4 h-4 text-indigo-400" />
                     </div>
                     <div>
-                      <h4 className="text-white text-sm font-semibold mb-1">{title}</h4>
-                      <p className="text-[#94a3b8] text-sm leading-relaxed">{desc}</p>
+                      <h4 className="text-white text-sm font-semibold mb-1">
+                        {title}
+                      </h4>
+                      <p className="text-[#94a3b8] text-sm leading-relaxed">
+                        {desc}
+                      </p>
                     </div>
                   </motion.div>
                 ))}
@@ -191,8 +194,10 @@ const WowSection = () => {
               <motion.button
                 initial={{ opacity: 0, y: 10 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.8 }}
-                className="group flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white text-sm font-semibold rounded-2xl transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/25 hover:-translate-y-0.5"
+                // transition={{ delay: 0.8 }}
+                whileTap={{ scale: 0.92 }}
+                transition={{ duration: 0.1 }}
+                className="group flex items-center gap-2 px-6 py-3 bg-linear-to-r from-indigo-600 to-violet-600 hover:from-indigo-500  hover:to-violet-500 text-white text-sm font-semibold rounded-2xl transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/25 hover:-translate-y-0.5"
               >
                 Explore the Engine
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -208,7 +213,10 @@ const WowSection = () => {
             {/* Glow rings */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="w-72 h-72 rounded-full border border-indigo-500/10 animate-pulse" />
-              <div className="absolute w-96 h-96 rounded-full border border-blue-500/5" style={{ animation: "spin 20s linear infinite" }} />
+              <div
+                className="absolute w-96 h-96 rounded-full border border-blue-500/5"
+                style={{ animation: "spin 20s linear infinite" }}
+              />
             </div>
 
             <DynamicCanvas />
@@ -227,7 +235,9 @@ const WowSection = () => {
                 className="absolute px-3 py-1.5 rounded-xl bg-[#0d1424]/90 border border-[#1a2540] backdrop-blur-sm"
                 style={{ left: x, top: y }}
               >
-                <span className="text-[11px] text-[#94a3b8] font-medium">{label}</span>
+                <span className="text-[11px] text-[#94a3b8] font-medium">
+                  {label}
+                </span>
               </motion.div>
             ))}
           </motion.div>
